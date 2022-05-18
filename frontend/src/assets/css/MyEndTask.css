@@ -1,0 +1,23 @@
+:root {
+    --main-bg-color: #faf9f2;
+    --font-logo: 'Nanum Pen Script', cursive;
+    --font-title: 'Cormorant Garamond', serif;
+    --font-para: 'Proza Libre', sans-serif;
+    --card-bg: #202021;
+    --blue-bg: #64b6ac;
+}
+
+.myendtask-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+p {
+    margin: 0;
+    padding: 0.5rem;
+    background-color: #9d9d9d;
+    opacity: 0.5;
+    border-radius: 10px;
+}

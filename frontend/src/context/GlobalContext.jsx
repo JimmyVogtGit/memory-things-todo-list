@@ -1,5 +1,6 @@
 import React, { createContext, useState } from 'react';
 
+
 export const GlobalContext = createContext();
 
 function GlobalContextProvider({ children }) {
@@ -31,3 +32,5 @@ function GlobalContextProvider({ children }) {
     </GlobalContext.Provider>
   );
 }
+
+export default GlobalContextProvider;

@@ -3,8 +3,8 @@ import '../assets/css/Pomodoro.css';
 import { CircularProgressBar } from '@tomik23/react-circular-progress-bar';
 
 export default function Pomodoro() {
-  const [settingTime, setSettingTime] = useState(60);
-  const [actualTime, setActualTime] = useState(60);
+  const [settingTime, setSettingTime] = useState(1500);
+  const [actualTime, setActualTime] = useState(1500);
 
   const [topChrono, setTopChrone] = useState(false);
 
@@ -50,6 +50,18 @@ export default function Pomodoro() {
   const resetTime = () => {
     setActualTime(settingTime);
   };
+  const [updateConfig, setUpdateConfig] = useState(0);
+  useEffect(() => {
+    const percent = Math.round(Math.floor(actualTime * 100) / settingTime);
+    const config = {};
+    config.percent = percent;
+    config.colorSlice = '#64b6ac';
+    config.fontColor = '#202021';
+    config.fill = '#121212';
+    config.linearGradient = ['#34a3a1', 'blue'];
+    setUpdateConfig(config);
+  }, [actualTime]);
+
   return (
     <div className='pomodoro-container'>
       <div className='set-timer'>
@@ -68,7 +80,7 @@ export default function Pomodoro() {
         <button onClick={startChrono}>{topChrono ? 'stop' : 'start'}</button>
         <button onClick={resetTime}>reset</button>
       </div>
-      <CircularProgressBar />
+      <CircularProgressBar {...updateConfig} />
     </div>
   );
 }

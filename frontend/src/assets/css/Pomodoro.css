@@ -1,9 +1,17 @@
+:root {
+    --main-bg-color: #faf9f2;
+    --font-logo: 'Nanum Pen Script', cursive;
+    --font-title: 'Cormorant Garamond', serif;
+    --font-para: 'Proza Libre', sans-serif;
+    --card-bg: #202021;
+    --blue-bg: #64b6ac;
+}
+
 .pomodoro-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: red;
     width: 100vw;
 }
 

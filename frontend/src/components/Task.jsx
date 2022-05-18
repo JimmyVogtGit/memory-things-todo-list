@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
 
-function Task() {
+function Task({ id, title }) {
   return (
-    <div>Task</div>
-  )
+    <div>
+      <input type='checkbox' />
+      <Link to={`my-task/${id}`}>{title}</Link>
+    </div>
+  );
 }
 
-export default Task
+export default Task;

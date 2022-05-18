@@ -1,6 +1,13 @@
+:root {
+    --main-bg-color: #faf9f2;
+    --font-logo: 'Nanum Pen Script', cursive;
+    --card-bg: #404142;
+}
+
 .App {
     margin: 0;
     padding: 0;
     height: 100vh;
     width: 100%;
+    background-color: var(--main-bg-color);
 }

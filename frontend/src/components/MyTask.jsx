@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import "../assets/css/MyTask.css"
+import '../assets/css/MyTask.css';
 import { GlobalContext } from '../context/GlobalContext';
 import Task from './Task';
 
@@ -8,7 +8,7 @@ function MyTask() {
   const [originTask, setOriginTask] = stateTask.task;
 
   return (
-    <div className="mytask-container">
+    <div className='mytask-container'>
       {originTask.map((task) => (
         <Task key={task.id} id={task.id} title={task.title} />
       ))}

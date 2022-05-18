@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import '../assets/css/TaskDescribe.css';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { GlobalContext } from '../context/GlobalContext';
 
 function TaskDescribe() {
@@ -18,6 +18,7 @@ function TaskDescribe() {
             <p>{task.description}</p>
           </div>
         ))}
+      <Link to='/'>go back</Link>
     </div>
   );
 }

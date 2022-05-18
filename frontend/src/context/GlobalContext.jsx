@@ -4,6 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 export const GlobalContext = createContext();
 
 function GlobalContextProvider({ children }) {
+  const [deleteTask, setDeleteTask] = useState([]);
   const [originTask, setOriginTask] = useState([
     {
       id: uuidv4(),
@@ -22,10 +23,22 @@ function GlobalContextProvider({ children }) {
     },
   ]);
 
+  const functionDeleteTask = (id) => {
+    const addDeleteTask = originTask.filter((el) => el.id === id);
+    const newArr = [...deleteTask];
+    newArr.push(addDeleteTask[0]);
+    setDeleteTask(newArr);
+
+    const filterTask = originTask.filter((el) => el.id !== id);
+    setOriginTask(filterTask);
+  };
+
   return (
     <GlobalContext.Provider
       value={{
         task: [originTask, setOriginTask],
+        deleteTask: [deleteTask, setDeleteTask],
+        functionDeleteTask: functionDeleteTask,
       }}
     >
       {children}

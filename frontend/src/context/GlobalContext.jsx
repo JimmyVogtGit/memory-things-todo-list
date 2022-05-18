@@ -50,7 +50,11 @@ function GlobalContextProvider({ children }) {
     setTitle('');
     setDescription('');
   };
-
+  const clearDatas = () => {
+    console.log('Clean the local Storage');
+    localStorage.clear();
+    window.location.reload();
+  };
   return (
     <GlobalContext.Provider
       value={{
@@ -60,6 +64,7 @@ function GlobalContextProvider({ children }) {
         deleteTask: [deleteTask, setDeleteTask],
         functionAddTask: functionAddTask,
         functionDeleteTask: functionDeleteTask,
+        clearDatas: clearDatas,
       }}
     >
       {children}

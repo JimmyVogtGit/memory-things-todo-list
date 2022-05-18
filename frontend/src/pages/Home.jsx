@@ -16,6 +16,7 @@ function Home() {
   const [title, setTitle] = globalContext.title;
   const [description, setDescription] = globalContext.description;
   const functionAddTask = globalContext.functionAddTask;
+  const clearDatas = globalContext.clearDatas;
 
   const titleFunction = (e) => {
     setTitle(e);
@@ -45,6 +46,7 @@ function Home() {
       </form>
       <MyTask />
       <MyEndTask />
+      <button onClick={() => clearDatas()}>clear datas</button>
     </div>
   );
 }

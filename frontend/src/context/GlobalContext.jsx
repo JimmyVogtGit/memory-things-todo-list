@@ -6,8 +6,8 @@ function GlobalContextProvider({ children }) {
   const [originTask, setOriginTask] = useState([
     {
       id: uuidv4(),
-      title: 'Faire les courses',
-      description: 'Allez a intermarché pour des courses',
+      title: 'Faire ses courses',
+      description: 'Allez au magasin pour faire les courses',
     },
     {
       id: uuidv4(),
@@ -17,7 +17,7 @@ function GlobalContextProvider({ children }) {
     {
       id: uuidv4(),
       title: 'Faire un tour de moto',
-      description: 'Ballade de quelques kilometres.',
+      description: 'Ballade de quelques kilometres avec les copains.',
     },
   ]);
 

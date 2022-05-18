@@ -1,0 +1,22 @@
+:root {
+    --main-bg-color: #faf9f2;
+    --font-logo: 'Nanum Pen Script', cursive;
+    --font-title: 'Cormorant Garamond', serif;
+    --font-para: 'Proza Libre', sans-serif;
+    --card-bg: #404142;
+    --blue-bg: #64b6ac;
+}
+
+.taskdescribe-container {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--main-bg-color);
+    font-family: var(--font-title);
+}
+
+p {
+    font-family: var(--font-para);
+}

@@ -1,8 +1,13 @@
 import React from 'react';
 import { GlobalContext } from '../context/GlobalContext';
 
+
 function Home() {
-  return <div>Home</div>;
+  return (
+    <div>
+      
+    </div>
+  );
 }
 
 export default Home;

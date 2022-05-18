@@ -7,10 +7,11 @@
     --blue-bg: #64b6ac;
 }
 
-.App {
-    margin: 0;
-    padding: 0;
-    padding-top: 100px;
-    height: 100vh;
-    background-color: var(--main-bg-color);
+.form-container {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

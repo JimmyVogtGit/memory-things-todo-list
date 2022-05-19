@@ -22,6 +22,18 @@ h2 {
     justify-content: center;
 }
 
+.btn-form {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    background-image: url("../img/plus.png");
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    border: none;
+    background-color: transparent;
+}
+
 .text-add-task {
     display: flex;
     align-items: center;
@@ -29,44 +41,6 @@ h2 {
     height: 80px;
     width: 100vw;
     border-radius: 10px;
-}
-
-.form-container {
-    width: 80vw;
-    height: auto;
-    display: flex;
-    gap: 1rem;
-    flex-direction: column;
-    align-items: stretch;
-    padding: 1rem;
-    border: 2px solid;
-}
-
-.form-container input {
-    height: 60px;
-}
-
-.form-container textarea {
-    height: 100px;
-}
-
-.form-container button {
-    border: none;
-    border-radius: 50px;
-    background-color: var(--blue-bg);
-    height: 50px;
-    width: 50px;
-    margin-bottom: 10px;
-}
-
-.form-container label {
-    font-family: var(--font-title);
-    font-size: 1.5rem;
-}
-
-.btn-add-task {
-    background-image: url('../img/plus.png');
-    background-size: cover;
 }
 
 .border {
@@ -83,6 +57,6 @@ h2 {
     border: none;
     background-image: url('../img/reset.png');
     background-size: cover;
-    height: 40px;
-    width: 40px;
+    height: 50px;
+    width: 50px;
 }

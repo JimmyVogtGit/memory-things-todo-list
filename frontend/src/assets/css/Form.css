@@ -1,0 +1,61 @@
+:root {
+    --main-bg-color: #faf9f2;
+    --font-logo: 'Nanum Pen Script', cursive;
+    --font-title: 'Cormorant Garamond', serif;
+    --font-para: 'Proza Libre', sans-serif;
+    --card-bg: #202021;
+    --blue-bg: #64b6ac;
+}
+
+.container-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-add-task {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    width: 100vw;
+    border-radius: 10px;
+}
+
+.form-container {
+    width: 80vw;
+    height: auto;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1rem;
+    border: 2px solid;
+}
+
+.form-container input {
+    height: 60px;
+}
+
+.form-container textarea {
+    height: 100px;
+}
+
+.form-container button {
+    border: none;
+    border-radius: 50px;
+    background-color: var(--blue-bg);
+    height: 50px;
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.form-container label {
+    font-family: var(--font-title);
+    font-size: 1.5rem;
+}
+
+.btn-add-task {
+    background-image: url('../img/plus.png');
+    background-size: cover;
+}

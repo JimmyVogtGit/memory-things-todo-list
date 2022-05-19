@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from 'react';
 import { GlobalContext } from '../context/GlobalContext';
+import '../assets/css/Form.css';
 
 function Form() {
   const globalContext = useContext(GlobalContext);
@@ -21,24 +22,26 @@ function Form() {
     setDescription(e);
   };
   return (
-    <form
-      onSubmit={(e) => functionAddTask(e, title, description)}
-      className='form-container'
-    >
-      <label htmlFor='add-task'>Titre :</label>
-      <input
-        onChange={(e) => titleFunction(e.target.value)}
-        value={title}
-        type='text'
-      />
-      <label>Description :</label>
-      <textarea
-        onChange={(e) => describeFunction(e.target.value)}
-        value={description}
-        type='text'
-      />
-      <button className='btn-add-task'></button>
-    </form>
+    <div className="container-form">
+      <form
+        onSubmit={(e) => functionAddTask(e, title, description)}
+        className='form-container'
+      >
+        <label htmlFor='add-task'>Titre :</label>
+        <input
+          onChange={(e) => titleFunction(e.target.value)}
+          value={title}
+          type='text'
+        />
+        <label>Description :</label>
+        <textarea
+          onChange={(e) => describeFunction(e.target.value)}
+          value={description}
+          type='text'
+        />
+        <button className='btn-add-task'></button>
+      </form>
+    </div>
   );
 }
 

@@ -1,4 +1,5 @@
 import React, { useContext, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import '../assets/css/Home.css';
 import { GlobalContext } from '../context/GlobalContext';
 import MyTask from '../components/MyTask';
@@ -26,28 +27,9 @@ function Home() {
   };
   return (
     <div className='home-container'>
-      <div className='text-add-task'>
-        <h1>Ajouter une tâche</h1>
-      </div>
-
-      <form
-        onSubmit={(e) => functionAddTask(e, title, description)}
-        className='form-container'
-      >
-        <label htmlFor='add-task'>Titre :</label>
-        <input
-          onChange={(e) => titleFunction(e.target.value)}
-          value={title}
-          type='text'
-        />
-        <label>Description :</label>
-        <textarea
-          onChange={(e) => describeFunction(e.target.value)}
-          value={description}
-          type='text'
-        />
-        <button className='btn-add-task'></button>
-      </form>
+      <button className='btn-form'>
+        <Link to='/form'></Link>
+      </button>
       <h2>Mes tâches en cours</h2>
       <MyTask />
       <div className='border'></div>

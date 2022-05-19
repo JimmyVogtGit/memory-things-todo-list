@@ -1,0 +1,74 @@
+:root {
+    --main-bg-color: #faf9f2;
+    --font-logo: 'Nanum Pen Script', cursive;
+    --font-title: 'Cormorant Garamond', serif;
+    --font-para: 'Proza Libre', sans-serif;
+    --card-bg: #202021;
+    --blue-bg: #64b6ac;
+}
+
+.container-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-add-task {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    width: 100vw;
+    border-radius: 10px;
+}
+
+.form-container {
+    width: 80vw;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1rem;
+    border: 2px solid;
+}
+
+.form-container input {
+    height: 60px;
+}
+
+.form-container textarea {
+    height: 100px;
+}
+
+.form-container label {
+    font-family: var(--font-title);
+    font-size: 1.5rem;
+}
+
+.btn-add-task {
+    background-image: url('../img/enregistrer.png');
+    background-size: cover;
+    background-color: transparent;
+    border: none;
+    height: 50px;
+    width: 50px;
+}
+
+.back-img-form {
+    position: fixed;
+    height: 50px;
+    bottom: 100px;
+    right: 20px;
+}
+
+@media screen and (min-width: 780px) {
+    .form-container {
+        width: 60vw;
+        height: 60vh;
+    }
+    .back-img-form {
+        height: 50px;
+        bottom: 100px;
+        right: 100px;
+    }
+}

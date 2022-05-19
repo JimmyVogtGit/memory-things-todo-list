@@ -3,20 +3,48 @@
     --font-logo: 'Nanum Pen Script', cursive;
     --font-title: 'Cormorant Garamond', serif;
     --font-para: 'Proza Libre', sans-serif;
-    --card-bg: #404142;
+    --card-bg: #202021;
     --blue-bg: #64b6ac;
 }
 
-.taskdescribe-container {
-    background-color: var(--card-bg);
-    border-radius: 10px;
+.global-taskdescribe {
     display: flex;
+    justify-content: center;
+}
+
+.taskdescribe-container {
+    height: 80vw;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: var(--main-bg-color);
     font-family: var(--font-title);
+    color: #333333;
+    background: #ffffff;
+    text-shadow: 2px 2px 0px #ffffff, 5px 4px 0px rgba(0, 0, 0, 0.15);
+    border: solid 1px;
+    box-shadow: 10px 5px 5px var(--card-bg);
 }
 
 p {
     font-family: var(--font-para);
+}
+
+.text-description {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.back-img {
+    height: 20px;
+    width: 20px;
+}
+
+@media screen and (min-width: 780px) {
+    .taskdescribe-container {
+        height: 40vw;
+        width: 40vw;
+    }
 }

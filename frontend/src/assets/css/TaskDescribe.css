@@ -41,3 +41,10 @@ p {
     height: 20px;
     width: 20px;
 }
+
+@media screen and (min-width: 780px) {
+    .taskdescribe-container {
+        height: 40vw;
+        width: 40vw;
+    }
+}

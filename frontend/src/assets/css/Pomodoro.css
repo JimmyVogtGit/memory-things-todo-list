@@ -92,3 +92,13 @@
     height: 20px;
     width: 20px;
 }
+
+@media screen and (min-width: 780px) {
+    .pomodoro-container {
+        width: 60vw;
+        border-radius: 100px;
+        background: linear-gradient(#c77878, #b94b38);
+        color: var(--main-bg-color);
+        gap: 1rem;
+    }
+}

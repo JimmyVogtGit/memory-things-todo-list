@@ -30,3 +30,10 @@
     height: 20px;
     width: 20px;
 }
+
+@media screen and (min-width: 780px) {
+    .myendtask-container {
+        display: flex;
+        flex-flow: row wrap;
+    }
+}

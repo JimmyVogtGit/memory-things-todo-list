@@ -9,7 +9,7 @@
 
 .task-container {
     box-shadow: 5px 5px 5px black;
-    width: 80%;
+    width: 80vw;
     padding: 5px;
     display: flex;
     justify-content: space-between;
@@ -32,4 +32,16 @@ a {
     font-family: var(--font-title);
     font-size: large;
     font-weight: bold;
+}
+
+@media screen and (min-width: 780px) {
+    .task-container {
+        box-shadow: 5px 5px 5px black;
+        width: 200px;
+        padding: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--card-bg);
+    }
 }

@@ -60,3 +60,15 @@
     bottom: 100px;
     right: 20px;
 }
+
+@media screen and (min-width: 780px) {
+    .form-container {
+        width: 60vw;
+        height: 60vh;
+    }
+    .back-img-form {
+        height: 50px;
+        bottom: 100px;
+        right: 100px;
+    }
+}

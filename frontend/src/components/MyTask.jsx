@@ -4,7 +4,7 @@ import { GlobalContext } from '../context/GlobalContext';
 import Task from './Task';
 
 function MyTask() {
-  const colorStyle = ['#A5AEB0', '#c77878', '#D69941', '#64B6AC'];
+  const colorStyle = ['#B0C8CD', '#c77878', '#D69941', '#64B6AC'];
   const stateTask = useContext(GlobalContext);
   const [originTask, setOriginTask] = stateTask.task;
   const functionDeleteTask = stateTask.functionDeleteTask;

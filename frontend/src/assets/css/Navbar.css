@@ -1,0 +1,112 @@
+:root {
+    --main-bg-color: #faf9f2;
+    --font-logo: 'Nanum Pen Script', cursive;
+    --font-title: 'Cormorant Garamond', serif;
+    --font-para: 'Proza Libre', sans-serif;
+    --card-bg: #202021;
+    --blue-bg: #64b6ac;
+    --red-bg: #db3a34;
+    --yellow-bg: #ffc857;
+}
+
+.navbar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    background-color: var(--main-bg-color);
+}
+
+.navbar-container>h1 {
+    font-family: var(--font-logo);
+    color: var(--card-bg);
+}
+
+.memory {
+    color: var(--blue-bg);
+}
+
+.img-logo {
+    height: 70px;
+    width: 70px;
+}
+
+.btn-menu {
+    background-color: transparent;
+    background-image: url('../img/menu.png');
+    border: none;
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+}
+
+.container {
+    position: absolute;
+}
+
+.menu-container {
+    background: linear-gradient(#c77878, #b94b38);
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    height: 150px;
+    width: 200px;
+    border-radius: 0, 10px, 10px, 0;
+}
+
+.ul-link {
+    list-style-type: none;
+}
+
+.link>a {
+    color: var(--main-bg-color);
+    font-size: 1.2rem;
+    font-family: var(--font-title);
+}
+
+.link :hover {
+    border-bottom: solid 1px;
+}
+
+.close-menu {
+    background-color: transparent;
+    background-image: url('../img/close.png');
+    background-size: cover;
+    border: none;
+    height: 20px;
+    width: 20px;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+.overlay {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100vw;
+    background-color: var(--card-bg);
+    opacity: 0.8;
+}
+
+@media screen and (min-width: 780px) {
+    .menu-container {
+        height: 300px;
+        width: 400px;
+        justify-content: space-around;
+    }
+    .link>a {
+        font-size: 2.5rem;
+    }
+}

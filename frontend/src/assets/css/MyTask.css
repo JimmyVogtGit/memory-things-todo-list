@@ -1,0 +1,33 @@
+:root {
+    --main-bg-color: #faf9f2;
+    --font-logo: 'Nanum Pen Script', cursive;
+    --font-title: 'Cormorant Garamond', serif;
+    --font-para: 'Proza Libre', sans-serif;
+    --card-bg: #202021;
+    --blue-bg: #64b6ac;
+}
+
+.mytask-container {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
+    width: 80vw;
+    height: auto;
+    border-radius: 10px;
+}
+
+a {
+    color: var(--main-bg-color);
+    font-family: var(--font-title);
+    list-style-type: none;
+    padding: 0.5rem;
+}
+
+@media screen and (min-width: 780px) {
+    .mytask-container {
+        flex-flow: row wrap;
+    }
+}

@@ -11,7 +11,6 @@ function MyEndTask() {
       {deleteTask.map((element) => (
         <p key={element.id}>{element.title}</p>
       ))}
-      {/* <img className='img-check' src={check} alt='check' /> */}
     </div>
   );
 }

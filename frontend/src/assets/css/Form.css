@@ -24,7 +24,6 @@
 
 .form-container {
     width: 80vw;
-    height: auto;
     display: flex;
     gap: 1rem;
     flex-direction: column;
@@ -41,21 +40,23 @@
     height: 100px;
 }
 
-.form-container button {
-    border: none;
-    border-radius: 50px;
-    background-color: var(--blue-bg);
-    height: 50px;
-    width: 50px;
-    margin-bottom: 10px;
-}
-
 .form-container label {
     font-family: var(--font-title);
     font-size: 1.5rem;
 }
 
 .btn-add-task {
-    background-image: url('../img/plus.png');
+    background-image: url('../img/enregistrer.png');
     background-size: cover;
+    background-color: transparent;
+    border: none;
+    height: 50px;
+    width: 50px;
+}
+
+.back-img-form {
+    position: fixed;
+    height: 50px;
+    bottom: 100px;
+    right: 20px;
 }

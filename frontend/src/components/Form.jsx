@@ -1,6 +1,8 @@
 import React, { useContext, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { GlobalContext } from '../context/GlobalContext';
 import '../assets/css/Form.css';
+import back from '../assets/img/back.png';
 
 function Form() {
   const globalContext = useContext(GlobalContext);
@@ -22,7 +24,8 @@ function Form() {
     setDescription(e);
   };
   return (
-    <div className="container-form">
+    <div className='container-form'>
+      <h2>Ajouter vos tâches</h2>
       <form
         onSubmit={(e) => functionAddTask(e, title, description)}
         className='form-container'
@@ -41,6 +44,9 @@ function Form() {
         />
         <button className='btn-add-task'></button>
       </form>
+      <Link to='/'>
+        <img className='back-img-form' src={back} alt='back' />
+      </Link>
     </div>
   );
 }

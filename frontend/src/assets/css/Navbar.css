@@ -50,7 +50,7 @@
 }
 
 .menu-container {
-    background: linear-gradient(#ffc857, #64b6ac);
+    background: linear-gradient(#c77878, #b94b38);
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
@@ -85,8 +85,8 @@
     height: 20px;
     width: 20px;
     position: fixed;
-    top: 5px;
-    right: 5px;
+    top: 10px;
+    right: 10px;
 }
 
 .overlay {

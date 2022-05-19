@@ -10,18 +10,20 @@ function TaskDescribe() {
   const [originTask, setOriginTask] = globalContext.task;
 
   return (
-    <div className='taskdescribe-container'>
-      {originTask
-        .filter((el) => el.id === params.id)
-        .map((task) => (
-          <div>
-            <h1>{task.title}</h1>
-            <p>{task.description}</p>
-          </div>
-        ))}
-      <Link to='/'>
-        <img className='back-img' src={back} alt='back' />
-      </Link>
+    <div className='global-taskdescribe'>
+      <div className='taskdescribe-container'>
+        {originTask
+          .filter((el) => el.id === params.id)
+          .map((task) => (
+            <div className='text-description'>
+              <h1>{task.title}</h1>
+              <p>{task.description}</p>
+            </div>
+          ))}
+        <Link to='/'>
+          <img className='back-img' src={back} alt='back' />
+        </Link>
+      </div>
     </div>
   );
 }

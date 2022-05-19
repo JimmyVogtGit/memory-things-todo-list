@@ -23,6 +23,7 @@
     background-color: #9d9d9d;
     font-weight: bold;
     padding: 0.5rem;
+    text-decoration: line-through;
 }
 
 .img-check {

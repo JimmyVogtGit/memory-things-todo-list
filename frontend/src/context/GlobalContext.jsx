@@ -36,20 +36,21 @@ function GlobalContextProvider({ children }) {
 
   const functionAddTask = (e, title, description) => {
     e.preventDefault();
-    if (title === '') {
-      return alert('Titre Obligatoire');
+
+    if (title.length !== 0) {
+      const newArr = [...originTask];
+      const newObj = {};
+      newObj.id = uuidv4();
+      newObj.title = title;
+      newObj.description = description;
+      newArr.push(newObj);
+      localStorage.setItem('tasks', JSON.stringify(newArr));
+      setOriginTask(newArr);
+      setTitle('');
+      setDescription('');
     }
-    const newArr = [...originTask];
-    const newObj = {};
-    newObj.id = uuidv4();
-    newObj.title = title;
-    newObj.description = description;
-    newArr.push(newObj);
-    localStorage.setItem('tasks', JSON.stringify(newArr));
-    setOriginTask(newArr);
-    setTitle('');
-    setDescription('');
   };
+
   const clearDatas = () => {
     console.log('Clean the local Storage');
     localStorage.clear();

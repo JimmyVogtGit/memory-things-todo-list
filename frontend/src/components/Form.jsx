@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { GlobalContext } from '../context/GlobalContext';
 import '../assets/css/Form.css';
 import back from '../assets/img/back.png';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Form() {
   const globalContext = useContext(GlobalContext);
@@ -23,6 +25,12 @@ function Form() {
   const describeFunction = (e) => {
     setDescription(e);
   };
+  const notify = () => toast('Pas de titre');
+  const notif = () => {
+    if (title.length === 0) {
+      notify();
+    }
+  };
   return (
     <div className='container-form'>
       <h2>Ajouter vos tâches</h2>
@@ -42,7 +50,8 @@ function Form() {
           value={description}
           type='text'
         />
-        <button className='btn-add-task'></button>
+        <button className='btn-add-task' onClick={notif}></button>
+        <ToastContainer position='top-center' />
       </form>
       <Link to='/'>
         <img className='back-img-form' src={back} alt='back' />

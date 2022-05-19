@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import '../assets/css/MyEndTask.css';
 import { GlobalContext } from '../context/GlobalContext';
+import check from '../assets/img/check.png';
 
 function MyEndTask() {
   const globalContext = useContext(GlobalContext);
@@ -10,6 +11,7 @@ function MyEndTask() {
       {deleteTask.map((element) => (
         <p key={element.id}>{element.title}</p>
       ))}
+      {/* <img className='img-check' src={check} alt='check' /> */}
     </div>
   );
 }

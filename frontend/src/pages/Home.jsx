@@ -46,11 +46,14 @@ function Home() {
           value={description}
           type='text'
         />
-        <button className="btn-add-task"></button>
+        <button className='btn-add-task'></button>
       </form>
+      <h2>Mes tâches en cours</h2>
       <MyTask />
+      <div className='border'></div>
+      <h2>Mes tâches terminées</h2>
       <MyEndTask />
-      <button onClick={() => clearDatas()}>clear datas</button>
+      <button className='btn-clear' onClick={() => clearDatas()}></button>
     </div>
   );
 }

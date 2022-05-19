@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import '../assets/css/TaskDescribe.css';
 import { useParams, Link } from 'react-router-dom';
 import { GlobalContext } from '../context/GlobalContext';
+import back from '../assets/img/back.png';
 
 function TaskDescribe() {
   const params = useParams();
@@ -18,7 +19,9 @@ function TaskDescribe() {
             <p>{task.description}</p>
           </div>
         ))}
-      <Link to='/'>go back</Link>
+      <Link to='/'>
+        <img className='back-img' src={back} alt='back' />
+      </Link>
     </div>
   );
 }

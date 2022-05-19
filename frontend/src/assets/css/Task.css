@@ -8,12 +8,27 @@
 }
 
 .task-container {
-    width: 60%;
+    box-shadow: 5px 5px 5px black;
+    width: 80%;
     display: flex;
     justify-content: space-between;
-    background-color: var(--card-bg)
+    align-items: center;
+    background-color: var(--card-bg);
+}
+
+.btn-trash {
+    background-color: transparent;
+    border: none;
+    background-image: url('../img/poubelle.png');
+    background-size: cover;
+    width: 20px;
+    height: 20px;
 }
 
 a {
     text-decoration: none;
+    color: black;
+    font-family: var(--font-title);
+    font-size: large;
+    font-weight: bold;
 }

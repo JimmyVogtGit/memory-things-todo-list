@@ -7,6 +7,14 @@
     --blue-bg: #64b6ac;
 }
 
+h1 {
+    font-family: var(--font-para);
+}
+
+h2 {
+    font-family: var(--font-para);
+}
+
 .home-container {
     display: flex;
     flex-direction: column;
@@ -23,23 +31,26 @@
     border-radius: 10px;
 }
 
-.text-add-task h1 {
-    font-family: var(--font-title);
-}
-
 .form-container {
     width: 80vw;
     height: auto;
     display: flex;
     gap: 1rem;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     padding: 1rem;
-    background-color: var(--card-bg);
-    box-shadow: 10px 5px 5px black;
+    border: 2px solid;
 }
 
-.form-container>button {
+.form-container input {
+    height: 60px;
+}
+
+.form-container textarea {
+    height: 100px;
+}
+
+.form-container button {
     border: none;
     border-radius: 50px;
     background-color: var(--blue-bg);
@@ -50,11 +61,28 @@
 
 .form-container label {
     font-family: var(--font-title);
-    color: var(--main-bg-color);
     font-size: 1.5rem;
 }
 
 .btn-add-task {
     background-image: url('../img/plus.png');
     background-size: cover;
+}
+
+.border {
+    height: 1rem;
+    width: 100%;
+    border-bottom: solid 3px black;
+}
+
+.btn-clear {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: transparent;
+    border: none;
+    background-image: url('../img/reset.png');
+    background-size: cover;
+    height: 40px;
+    width: 40px;
 }

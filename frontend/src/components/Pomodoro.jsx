@@ -45,8 +45,10 @@ export default function Pomodoro() {
     setActualTime(actualTime + 60);
   };
   const sousSettingTime = () => {
-    setSettingTime(settingTime - 60);
-    setActualTime(actualTime - 60);
+    if (settingTime - 60 > 0) {
+      setSettingTime(settingTime - 60);
+      setActualTime(actualTime - 60);
+    }
   };
 
   const resetTime = () => {
@@ -74,28 +76,27 @@ export default function Pomodoro() {
         En savoir plus sur le pomodoro
       </a>
       <br />
-      <div className="global-timer">
-      <div className='set-timer'>
-        <button className='btn-more' onClick={addSettingTime}></button>
-        <span>
-          {settingTime / 60} {settingTime / 60 <= 1 ? 'minute' : 'minutes'}
-        </span>
-        <button className='btn-less' onClick={sousSettingTime}></button>
-      </div>
-      <h1>
-        {Math.trunc(actualTime / 60)} :
-        {actualTime % 60 < 10 ? `0${actualTime % 60}` : actualTime % 60}
-      </h1>
-      <div className='launch-chrono'>
-        <button
-          className={topChrono ? 'btn-launch stop' : 'btn-launch start'}
-          onClick={startChrono}
-        ></button>
-        <button className='btn-reset' onClick={resetTime}></button>
+      <div className='global-timer'>
+        <div className='set-timer'>
+          <button className='btn-more' onClick={addSettingTime}></button>
+          <span>
+            {settingTime / 60} {settingTime / 60 <= 1 ? 'minute' : 'minutes'}
+          </span>
+          <button className='btn-less' onClick={sousSettingTime}></button>
+        </div>
+        <h1>
+          {Math.trunc(actualTime / 60)} :
+          {actualTime % 60 < 10 ? `0${actualTime % 60}` : actualTime % 60}
+        </h1>
+        <div className='launch-chrono'>
+          <button
+            className={topChrono ? 'btn-launch stop' : 'btn-launch start'}
+            onClick={startChrono}
+          ></button>
+          <button className='btn-reset' onClick={resetTime}></button>
+        </div>
       </div>
 
-      </div>
-      
       <CircularProgressBar {...updateConfig} />
     </div>
   );

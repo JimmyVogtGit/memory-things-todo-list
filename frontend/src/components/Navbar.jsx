@@ -9,6 +9,7 @@ export default function Navbar() {
   const changeMenu = () => {
     setMenu(!menu);
   };
+
   return (
     <div className='navbar-container'>
       <img className='img-logo' src={logo} alt='logo' />
@@ -16,24 +17,26 @@ export default function Navbar() {
         Things <span className='memory'>Memory</span>
       </h1>
       <button className='btn-menu' onClick={changeMenu}></button>
+
       {menu ? (
-        <div className='menu-container'>
-          <ul className='ul-link'>
-            <li className='link'>
-              <Link to='/' style={{ textDecoration: 'none' }}>
-                My Tasks
-              </Link>
-            </li>
-            <br />
-            <li className='link'>
-              <Link to='/pomodoro' style={{ textDecoration: 'none' }}>
-                Pomodoro
-              </Link>
-            </li>
-          </ul>
-          <button className='close-menu' onClick={changeMenu}>
-            close
-          </button>
+        <div className='container'>
+          <div className='overlay' onClick={changeMenu}></div>
+          <div className='menu-container'>
+            <ul className='ul-link'>
+              <li className='link'>
+                <Link to='/' style={{ textDecoration: 'none' }}>
+                  My Tasks
+                </Link>
+              </li>
+              <br />
+              <li className='link'>
+                <Link to='/pomodoro' style={{ textDecoration: 'none' }}>
+                  Pomodoro
+                </Link>
+              </li>
+            </ul>
+            <button className='close-menu' onClick={changeMenu}></button>
+          </div>
         </div>
       ) : (
         ''

@@ -26,11 +26,15 @@ function Home() {
   };
   return (
     <div className='home-container'>
+      <div className='text-add-task'>
+        <h1>Ajouter une tâche</h1>
+      </div>
+
       <form
         onSubmit={(e) => functionAddTask(e, title, description)}
         className='form-container'
       >
-        <label htmlFor='add-task'>Title :</label>
+        <label htmlFor='add-task'>Titre :</label>
         <input
           onChange={(e) => titleFunction(e.target.value)}
           value={title}
@@ -42,7 +46,7 @@ function Home() {
           value={description}
           type='text'
         />
-        <button>add</button>
+        <button className="btn-add-task"></button>
       </form>
       <MyTask />
       <MyEndTask />

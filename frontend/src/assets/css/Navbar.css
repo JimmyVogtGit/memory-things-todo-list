@@ -5,6 +5,8 @@
     --font-para: 'Proza Libre', sans-serif;
     --card-bg: #202021;
     --blue-bg: #64b6ac;
+    --red-bg: #db3a34;
+    --yellow-bg: #ffc857;
 }
 
 .navbar-container {
@@ -17,6 +19,7 @@
     align-items: center;
     height: 80px;
     width: 100%;
+    background-color: var(--main-bg-color);
 }
 
 .navbar-container>h1 {
@@ -42,15 +45,22 @@
     width: 50px;
 }
 
+.container {
+    position: absolute;
+}
+
 .menu-container {
-    background-color: var(--card-bg);
+    background: linear-gradient(#ffc857, #64b6ac);
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
-    position: absolute;
+    position: fixed;
+    z-index: 2;
+    top: 0;
     right: 0;
     height: 150px;
     width: 200px;
+    border-radius: 0, 10px, 10px, 0;
 }
 
 .ul-link {
@@ -59,6 +69,7 @@
 
 .link>a {
     color: var(--main-bg-color);
+    font-size: 1.2rem;
     font-family: var(--font-title);
 }
 
@@ -68,10 +79,23 @@
 
 .close-menu {
     background-color: transparent;
+    background-image: url('../img/close.png');
+    background-size: cover;
     border: none;
-    height: 30px;
-    width: 30px;
+    height: 20px;
+    width: 20px;
     position: fixed;
     top: 5px;
     right: 5px;
+}
+
+.overlay {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100vw;
+    background-color: var(--card-bg);
+    opacity: 0.8;
 }

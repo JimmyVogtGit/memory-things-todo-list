@@ -22,4 +22,5 @@ a {
     color: var(--main-bg-color);
     font-family: var(--font-title);
     list-style-type: none;
+    padding: 0.5rem;
 }
